@@ -26,22 +26,18 @@ int main() {
     cout << separator << "  Спектральний клас | Приблизна маса (відн. Сонця) | Частина % | Чисельність  " << separator << endl;
     cout << separator << "--------------------|------------------------------|-----------|--------------" << separator << endl;
 
-    // Replace spectral_class1, estimate_mass1, part1, number1 with your actual values
     cout << separator << setw(20) << left << spectral_class1 << separator 
 		<< setw(30) << left << estimate_mass1 << separator 
 		<< setw(11) << left << fixed << setprecision(5) << part1 << separator 
 		<< setw(14) << left << number1 << separator << endl;
     
 	cout << "|--------------------|------------------------------|-----------|--------------|\n";
-
-    // Replace spectral_class2, estimate_mass2, part2, number2 with your actual values
     cout << separator << setw(20) << left << spectral_class2 << separator
 		<< setw(30) << left << fixed << setprecision(2) << estimate_mass2 << separator
 		<< setw(11) << left << fixed << setprecision(1) << part2 << separator
 		<< setw(14) << left << number2 << separator << endl;
     
 	cout << "|--------------------|------------------------------|-----------|--------------|\n";
-    // Replace spectral_class3, estimate_mass3, part3, number3 with your actual values
     cout << separator << setw(20) << left << spectral_class3 << separator
 		<< setw(30) << left << fixed << setprecision(1) << estimate_mass3 << separator
 		<< setw(11) << left << fixed << setprecision(1) << part3 << separator
