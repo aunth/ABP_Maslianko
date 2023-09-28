@@ -1,37 +1,54 @@
-#include <stdio.h>
+#include <iostream>
+#include <iomanip>
 
+using namespace std;
 
 int main() {
 	char spectral_class1, spectral_class2, spectral_class3;
 	float estimate_mass1, estimate_mass2, estimate_mass3;
 	float part1, part2, part3;
 	long int number1, number2, number3;
+	char separator = '|';
 
 
-	printf("1. Введіть 'Cпектральний клас', 'Приблизну масу', 'Частину', 'Чисельність'\n");
-	scanf(" %c %f %f %li", &spectral_class1, &estimate_mass1, &part1, &number1);
+	cout << "1. Введіть 'Cпектральний клас', 'Приблизну масу', 'Частину', 'Чисельність'\n";
+	cin >> spectral_class1 >> estimate_mass1 >> part1 >> number1;
 
-	printf("2. Введіть 'Cпектральний клас', 'Приблизну масу', 'Частину', 'Чисельність'\n");
-	scanf(" %c %f %f %li", &spectral_class2, &estimate_mass2, &part2, &number2);
+	cout << "2. Введіть 'Cпектральний клас', 'Приблизну масу', 'Частину', 'Чисельність'\n";
+	cin >> spectral_class2 >> estimate_mass2 >> part2 >> number2;
 
-	printf("3. Введіть 'Cпектральний клас', 'Приблизну масу', 'Частину', 'Чисельність'\n");
-	scanf(" %c %f %f %li", &spectral_class3, &estimate_mass3, &part3, &number3); 
+	cout << "3. Введіть 'Cпектральний клас', 'Приблизну масу', 'Частину', 'Чисельність'\n";
+	cin >> spectral_class3 >> estimate_mass3 >> part3 >> number3; 
 
-	printf("--------------------------------------------------------------------------------\n");
-	printf("|     Приблизна кількість зірок різних спектральних класів у Галактиці         |\n");
-	printf("|------------------------------------------------------------------------------|\n");
-	printf("|  Спектральний клас | Приблизна маса (відн. Сонця) | Частина %% | Чисельність  |\n");
-	printf("|                    |                              |           |              |\n");
-	printf("|--------------------|------------------------------|-----------|--------------|\n");
+    cout << "--------------------------------------------------------------------------------\n";
+    cout << separator << "     Приблизна кількість зірок різних спектральних класів у Галактиці         " << separator << endl;
+    cout << separator << "------------------------------------------------------------------------------" << separator << endl;
+    cout << separator << "  Спектральний клас | Приблизна маса (відн. Сонця) | Частина % | Чисельність  " << separator << endl;
+    cout << separator << "--------------------|------------------------------|-----------|--------------" << separator << endl;
 
-	printf("| %18c | %28.0f | %9.5f | %12li |\n", spectral_class1, estimate_mass1, part1, number1);
-	printf("| %18c | %28.2f | %9.1f | %12li |\n", spectral_class2, estimate_mass2, part2, number2);
-	printf("| %18c | %28.1f | %9.1f | %12li |\n", spectral_class3, estimate_mass3, part3, number3);
+    // Replace spectral_class1, estimate_mass1, part1, number1 with your actual values
+    cout << separator << setw(20) << left << spectral_class1 << separator 
+		<< setw(30) << left << estimate_mass1 << separator 
+		<< setw(11) << left << fixed << setprecision(5) << part1 << separator 
+		<< setw(14) << left << number1 << separator << endl;
+    
+	cout << "|--------------------|------------------------------|-----------|--------------|\n";
 
-
-	printf("|------------------------------------------------------------------------------|\n");
-	printf("|               Примітка: дані не показані для класів: B, A, G, K              |\n");
-	printf("|                                                                              |\n");
-	printf("--------------------------------------------------------------------------------\n");
+    // Replace spectral_class2, estimate_mass2, part2, number2 with your actual values
+    cout << separator << setw(20) << left << spectral_class2 << separator
+		<< setw(30) << left << fixed << setprecision(2) << estimate_mass2 << separator
+		<< setw(11) << left << fixed << setprecision(1) << part2 << separator
+		<< setw(14) << left << number2 << separator << endl;
+    
+	cout << "|--------------------|------------------------------|-----------|--------------|\n";
+    // Replace spectral_class3, estimate_mass3, part3, number3 with your actual values
+    cout << separator << setw(20) << left << spectral_class3 << separator
+		<< setw(30) << left << fixed << setprecision(1) << estimate_mass3 << separator
+		<< setw(11) << left << fixed << setprecision(1) << part3 << separator
+		<< setw(14) << left << number3 << separator << endl;
+    
+    cout << separator << "------------------------------------------------------------------------------" << separator << endl;
+    cout << separator << "               Примітка: дані не показані для класів: B, A, G, K              " << separator << endl;
+    cout << separator << "------------------------------------------------------------------------------" << separator << endl;
 	return 0;
 }
