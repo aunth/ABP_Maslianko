@@ -1,5 +1,6 @@
 #include "lab_1/lab_1.cpp"
 #include "lab_2/lab_2.cpp"
+#include "lab_3/lab_3.cpp"
 #include <iostream>
 
 using namespace std;
@@ -13,6 +14,12 @@ int main(void) {
 	switch (lab_num) {
 		case 1:
 			lab1();
+			break;
+		case 2:
+			lab2();
+			break;
+		case 3:
+			lab3();
 			break;
 		case 0:
 			return 0;

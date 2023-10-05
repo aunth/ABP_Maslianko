@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int main() {
+int lab3() {
 	double sum = 0;
 	long n;
 	double current;
