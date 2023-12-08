@@ -4,14 +4,14 @@
 
 using namespace std;
 
-struct star {
+struct s {
 	char clas[3];
 	double estimate_mass;
 	double part;
 	long int amount;
 };
 
-void sort_struct(star stars[], int size) {
+void sort_struct(s stars[], int size) {
     for (int i = 0; i < size - 1; i++) {
         int smallest = i;  // Initialize smallest with the current index
         for (int j = i + 1; j < size; j++) {
@@ -19,14 +19,14 @@ void sort_struct(star stars[], int size) {
                 smallest = j;
         }
         // Swap the elements
-        star tmp = stars[i];
+        s tmp = stars[i];
         stars[i] = stars[smallest];
         stars[smallest] = tmp;
     }
 }
 
 
-void fill_precisions(int precision[][2], star stars[], int size) {
+void fill_precisions(int precision[][2], s stars[], int size) {
     for (int i = 0; i < size; i++) {
         double estimate_mass = stars[i].estimate_mass;
         double part = stars[i].part;
@@ -57,7 +57,7 @@ void fill_precisions(int precision[][2], star stars[], int size) {
 int lab8() {
 	int size = 10;
 	char str[3];
-	star stars[10];
+	s stars[10];
 	int precision[10][2];
 	char separator = '|';
 	int i;

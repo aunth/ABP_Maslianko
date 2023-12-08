@@ -114,4 +114,5 @@ int lab12() {
     a.show_info();
     a.set_color("Білий");
     a.show_info();
+    return 0;
 }

@@ -67,7 +67,7 @@ public:
     }
 };
 
-int main() {
+int lab14_2() {
     int initialArray[] = {1, 2, 3, 4, 5};
     Queue myQueue(initialArray, 5);
 

@@ -144,4 +144,6 @@ int lab10() {
     commit();
     initf("new.txt");
     fshow_all();
+
+    return 0;
 }

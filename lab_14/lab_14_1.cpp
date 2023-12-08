@@ -146,7 +146,7 @@ public:
     }
 };
 
-int main() {
+int lab14_1() {
     const char* initialData[] = {"Hello, ", "world!"};
     Row** rows = new Row*[2];
 
